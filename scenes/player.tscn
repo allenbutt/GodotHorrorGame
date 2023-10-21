@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfee68k1kig3y"]
+[gd_scene load_steps=4 format=3 uid="uid://bfee68k1kig3y"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_bpyhy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hac2d"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vrdft"]
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_bpyhy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hac2d")
@@ -16,3 +19,24 @@ mesh = SubResource("CapsuleMesh_vrdft")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.973658, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="Hand" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00582469, 0.205402, -0.00115323)
+
+[node name="Flashlight" type="SpotLight3D" parent="Hand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60174, 0, 0)
+light_energy = 2.0
+light_volumetric_fog_energy = 0.01
+light_specular = 0.0
+spot_range = 25.0
+spot_attenuation = 0.143587
+spot_angle = 28.0
+
+[node name="FlashlightSmall" type="SpotLight3D" parent="Hand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60174, 0, 0)
+light_energy = 2.0
+light_volumetric_fog_energy = 2.0
+light_specular = 0.0
+spot_range = 10.0
+spot_attenuation = 0.196146
+spot_angle = 10.0
