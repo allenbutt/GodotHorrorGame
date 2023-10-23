@@ -30,6 +30,7 @@ func _process(delta):
 	hand.rotation.y = lerp(hand.rotation.y, -deg_to_rad(head_y_axis), cameraAcceleration * delta)
 	Flashlight.rotation.x = lerp(Flashlight.rotation.x, -deg_to_rad(camera_x_axis), cameraAcceleration * delta)
 	FlashlightSmall.rotation.x = lerp(Flashlight.rotation.x, -deg_to_rad(camera_x_axis), cameraAcceleration * delta)
+	#FlashlightInverse.rotation.x = lerp(Flashlight.rotation.x, -deg_to_rad(camera_x_axis), cameraAcceleration * delta)
 	
 	head.rotation.y = -deg_to_rad(head_y_axis)
 	camera.rotation.x = -deg_to_rad(camera_x_axis)

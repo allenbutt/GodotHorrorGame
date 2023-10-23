@@ -5,6 +5,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hac2d"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vrdft"]
+radius = 0.3
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_bpyhy")
@@ -19,24 +20,35 @@ mesh = SubResource("CapsuleMesh_vrdft")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.973658, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+far = 1000.0
 
 [node name="Hand" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00582469, 0.205402, -0.00115323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280254, 0.729313, -0.00115323)
 
 [node name="Flashlight" type="SpotLight3D" parent="Hand"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60174, 0, 0)
-light_energy = 2.0
+transform = Transform3D(0.999733, 0, -0.0230887, 0, 1, 0, 0.0230887, 0, 0.999733, 0, 0, 0)
+light_energy = 1.5
 light_volumetric_fog_energy = 0.01
-light_specular = 0.0
+shadow_enabled = true
 spot_range = 100.0
 spot_attenuation = 0.143587
 spot_angle = 32.0
 
 [node name="FlashlightSmall" type="SpotLight3D" parent="Hand"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60174, 0, 0)
 light_energy = 2.0
-light_volumetric_fog_energy = 1.5
+light_volumetric_fog_energy = 0.35
 light_specular = 0.0
+shadow_enabled = true
 spot_range = 10.0
 spot_attenuation = 0.196146
 spot_angle = 10.0
+
+[node name="FlashlightSmallInverse" type="SpotLight3D" parent="Hand"]
+visible = false
+light_energy = 2.0
+light_volumetric_fog_energy = 0.0
+light_negative = true
+light_specular = 0.0
+spot_range = 10.0
+spot_attenuation = 0.196146
+spot_angle = 7.5
