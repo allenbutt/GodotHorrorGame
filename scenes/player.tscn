@@ -36,19 +36,8 @@ spot_angle = 32.0
 
 [node name="FlashlightSmall" type="SpotLight3D" parent="Hand"]
 light_energy = 2.0
-light_volumetric_fog_energy = 0.35
+light_volumetric_fog_energy = 2.0
 light_specular = 0.0
 shadow_enabled = true
 spot_range = 10.0
-spot_attenuation = 0.196146
 spot_angle = 10.0
-
-[node name="FlashlightSmallInverse" type="SpotLight3D" parent="Hand"]
-visible = false
-light_energy = 2.0
-light_volumetric_fog_energy = 0.0
-light_negative = true
-light_specular = 0.0
-spot_range = 10.0
-spot_attenuation = 0.196146
-spot_angle = 7.5
