@@ -1,10 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://ltl5megg5n21"]
+[gd_scene load_steps=19 format=3 uid="uid://ltl5megg5n21"]
 
 [ext_resource type="Script" path="res://scripts/test_node.gd" id="1_kb141"]
 [ext_resource type="PackedScene" uid="uid://caqxfqurbp3ku" path="res://addons/proton_scatter/demos/assets/pine_tree.tscn" id="1_nviy5"]
 [ext_resource type="Texture2D" path="res://art/Coast_Sand_2.dds" id="2_4wrk8"]
 [ext_resource type="PackedScene" uid="uid://bfee68k1kig3y" path="res://scenes/player.tscn" id="2_d33te"]
 [ext_resource type="PackedScene" uid="uid://b8abs8me7ckgo" path="res://addons/proton_scatter/demos/assets/bush.tscn" id="5_vs4b4"]
+[ext_resource type="PackedScene" uid="uid://8ay5rlrutcmx" path="res://addons/proton_scatter/demos/assets/large_rock.tscn" id="6_0wgti"]
+[ext_resource type="PackedScene" uid="uid://bodkixm8bubes" path="res://addons/proton_scatter/demos/assets/mushroom.tscn" id="7_hbo2g"]
+[ext_resource type="PackedScene" uid="uid://bltmr2xgs8nq1" path="res://addons/proton_scatter/demos/assets/small_rock.tscn" id="8_fph3g"]
+[ext_resource type="PackedScene" uid="uid://b4ted6l27vuyd" path="res://addons/proton_scatter/demos/assets/brick.tscn" id="9_f1nra"]
+[ext_resource type="PackedScene" uid="uid://ctkii8aivl17n" path="res://addons/proton_scatter/demos/assets/dead_branch.tscn" id="10_pu3ti"]
+[ext_resource type="PackedScene" uid="uid://bmglbfn5jaubp" path="res://addons/proton_scatter/demos/assets/gobot.tscn" id="11_gbqnb"]
+[ext_resource type="PackedScene" uid="uid://bfcjigq0vdl4d" path="res://addons/proton_scatter/demos/assets/fence_planks.tscn" id="12_h1igj"]
+[ext_resource type="PackedScene" uid="uid://c3c76je2y6vfj" path="res://addons/proton_scatter/demos/assets/grass.tscn" id="13_0prqt"]
+[ext_resource type="PackedScene" uid="uid://cia3jakp3wj1d" path="res://addons/proton_scatter/demos/assets/grass_2.tscn" id="14_2uggm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dupcd"]
 albedo_texture = ExtResource("2_4wrk8")
@@ -35,7 +44,6 @@ use_collision = true
 
 [node name="Player" parent="." instance=ExtResource("2_d33te")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.803287, 1, 3)
-visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1tak1")
@@ -61,3 +69,30 @@ material = SubResource("FogMaterial_glfvk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.00579, 0)
 light_energy = 5.0
 omni_range = 50.0
+
+[node name="large_rock" parent="." instance=ExtResource("6_0wgti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18523, 0.0010004, -2.50561)
+
+[node name="mushrooms" parent="." instance=ExtResource("7_hbo2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75131, 0.000999928, -0.382917)
+
+[node name="small_rock" parent="." instance=ExtResource("8_fph3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86723, 0.0010004, 0.680118)
+
+[node name="brick" parent="." instance=ExtResource("9_f1nra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86369, 0.000999451, 1.46337)
+
+[node name="dead_branch" parent="." instance=ExtResource("10_pu3ti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24735, 0.375839, 0.62763)
+
+[node name="gobot" parent="." instance=ExtResource("11_gbqnb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97544, 0.000999928, 1.06187)
+
+[node name="fence_planks" parent="." instance=ExtResource("12_h1igj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86204, 0.000999928, 2.34185)
+
+[node name="grass" parent="." instance=ExtResource("13_0prqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47972, 0.000999928, 1.04076)
+
+[node name="grass_2" parent="." instance=ExtResource("14_2uggm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36689, 0.000999928, 1.88919)

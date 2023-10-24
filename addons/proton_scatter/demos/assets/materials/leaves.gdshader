@@ -30,7 +30,7 @@ void vertex() {
 	
 	float wind_influence = smoothstep(0, 1, 1.0 - UV.y);
 	vec2 wind_offset = -wind_direction * wind_strength * wind_influence * wind;
-	world_pos.xz += wind_offset;
+	world_pos.xz += wind_offset * vec2(4, 4);
 	world_pos.y -= wind * wind_influence * wind_strength * 0.45;
 	
 	vec4 local_pos = inverse(MODEL_MATRIX) * world_pos;
